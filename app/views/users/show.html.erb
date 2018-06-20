@@ -1,7 +1,11 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
+  <%= @user.microposts.first.content %>
+</p>
+
+<p>
+  <strong>ユーザー名:</strong>
   <%= @user.name %>
 </p>
 
@@ -10,5 +14,5 @@
   <%= @user.email %>
 </p>
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+<%= link_to '編集', edit_user_path(@user) %> |
+<%= link_to '戻る', users_path %>
